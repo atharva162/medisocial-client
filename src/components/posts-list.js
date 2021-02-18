@@ -28,7 +28,7 @@ export class postslist extends Component {
         this.state = {posts: []};
     }
     componentDidMount(){
-        axios.get('http://localhost:5000/posts/').then(response =>{
+        axios.get('https://medisocial.herokuapp.com/posts/').then(response =>{
         this.setState({posts: response.data});
         }).catch((error)=>{
             console.log(error);
