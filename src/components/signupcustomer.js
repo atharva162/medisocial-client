@@ -25,7 +25,7 @@ function signupcustomer() {
     }try {
       setError("")
       setLoading(true)
-      const response = await axios.post("http://localhost:5000/auth/register/customer", userData)
+      const response = await axios.post("https://medisocial.herokuapp.com/auth/register/customer", userData)
       if(response.data=='User already exists'){
         setLoading(false)
        return setError('This mobile no. is already registered')
