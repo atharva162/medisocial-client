@@ -17,7 +17,7 @@ function contact() {
         try {
             setError("")
             setLoading(true)
-            await axios.post('http://localhost:5000/connect/', formData)
+            await axios.post('https://medisocial.herokuapp.com/connect/', formData)
             setConfirmconnect(true)
         } catch {
             setError("Failed to connect, please check your network and try again")
