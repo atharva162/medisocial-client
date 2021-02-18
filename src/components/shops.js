@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function shops() {
     const [shops, setShops] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/auth/find').then(response =>{
+        axios.get('https://medisocial.herokuapp.com/auth/find').then(response =>{
             setShops(response.data)
             console.log(response.data)
         }).catch((error) =>{
