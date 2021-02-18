@@ -27,7 +27,7 @@ const form = () => {
           setLoading(true);
           setLoadingmessage('Loading..., updating your post and sending message to all the registered medical store')
           const data ={username: user.username, name: user.name, title: postData.title, image: postData.image}
-          axios.post('http://localhost:5000/posts/add',data).then(res=>
+          axios.post('https://medisocial.herokuapp.com/posts/add',data).then(res=>
           console.log(res.data));
            window.location='/';
     }
