@@ -19,7 +19,7 @@ function connect(props) {
     const [errorconnect, setErrorconnect] = useState(false)
     const [loading, setLoading] = useState(false)
     useEffect(()=>{
-     axios.get('http://localhost:5000/posts/'+ props.match.params.id).then(response=>{
+     axios.get('https://medisocial.herokuapp.com/posts/'+ props.match.params.id).then(response=>{
          setPost(response.data)
      }).catch((error)=>{
          console.log(error)
@@ -66,13 +66,13 @@ function connect(props) {
           phone: user.username,
           address: user.address
         }
-        axios.post('http://localhost:5000/connect/post', data).then(res=>console.log(res));
+        axios.post('https://medisocial.herokuapp.com/connect/post', data).then(res=>console.log(res));
         setOpenconnect(false)
         setConfirmconnect(true)
       }
 
     function deletePost(id){
-     axios.delete('http://localhost:5000/posts/'+id).then(
+     axios.delete('https://medisocial.herokuapp.com/posts/'+id).then(
          response=>{
              console.log(response)
              window.location='/'
