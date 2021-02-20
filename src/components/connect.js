@@ -102,7 +102,7 @@ function connect(props) {
       >
         <DialogTitle id="alert-dialog-title">{"Are you sure you want to delete this post?"}</DialogTitle>
         <DialogActions>
-          <Button onClick={()=>{deletePost(post._id)}} color="secondary">
+          <Button onClick={deletePost(post._id)} color="secondary">
             Delete
           </Button>
           <Button onClick={handleClose} color="primary" autoFocus>
