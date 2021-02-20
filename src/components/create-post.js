@@ -22,7 +22,7 @@ const form = () => {
     const clear = () => {
         setPostData({ creator: '', title: '', image: '' });
     };
-    const handleSubmit= async (e)=> {
+        async function handleSubmit(e {
           e.preventDefault();
           setLoading(true);
           setLoadingmessage('Loading..., updating your post and sending message to all the registered medical store')
