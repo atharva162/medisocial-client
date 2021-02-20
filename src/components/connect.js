@@ -71,13 +71,9 @@ function connect(props) {
         setConfirmconnect(true)
       }
 
-    function deletePost(id){
-     axios.delete('https://medisocial.herokuapp.com/posts/'+id).then(
-         response=>{
-             console.log(response)
-             window.location='/'
-         }
-     )
+     async function deletePost(id){
+      await axios.delete('https://medisocial.herokuapp.com/posts/'+id)
+      window.location="/" 
     }
 
     return (
@@ -102,7 +98,7 @@ function connect(props) {
       >
         <DialogTitle id="alert-dialog-title">{"Are you sure you want to delete this post?"}</DialogTitle>
         <DialogActions>
-          <Button onClick={deletePost(post._id)} color="secondary">
+          <Button onClick={()=>(deletePost(post._id))} color="secondary">
             Delete
           </Button>
           <Button onClick={handleClose} color="primary" autoFocus>
