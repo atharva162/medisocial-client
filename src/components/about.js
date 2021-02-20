@@ -36,7 +36,7 @@ export default function contact() {
           About
         </Typography>
         <Typography className={classes.pos} color="textSecondary">
-          MediSocial
+          MediSocialplus
         </Typography>
         <Typography variant="body2" component="p">
          MediSocial is an online application aimed to connect you and medical stores around you.
