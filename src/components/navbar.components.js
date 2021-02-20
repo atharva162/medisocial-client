@@ -31,7 +31,7 @@ export default function NavBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            MediSocial
+            MediSocialplus
           </Typography>
           <Button color="inherit"><Link to="/" style={{color: "inherit" }}><HomeIcon/></Link></Button>
           <Button color="inherit"><Link to="/about" style={{color: "inherit" }}><InfoIcon/></Link></Button>
