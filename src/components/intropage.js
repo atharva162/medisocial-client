@@ -17,7 +17,7 @@ function homepage() {
   }, [])
   return <div>
       <h3 className="w-100 text-center mt-2">
-      Welcome to MediSocial!!</h3>
+      Welcome to MediSocialplus!!</h3>
       <br/>
       <h4 className="w-100 text-center mt-2">A one end search to all your medicines</h4>
       <Container
