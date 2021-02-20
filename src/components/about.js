@@ -39,11 +39,11 @@ export default function contact() {
           MediSocialplus
         </Typography>
         <Typography variant="body2" component="p">
-         MediSocial is an online application aimed to connect you and medical stores around you.
+         MediSocialplus is an online application aimed to connect you and medical stores around you.
           <br />
-          MediSocial is open to all the users and medical stores for consumption
+          MediSocialplus is open to all the users and medical stores for consumption
           <br/>
-          You can use MediSocial to:-
+          You can use MediSocialplus to:-
           <ul>
               <li>Post a medicine you need by just uploading its name and image(if available), which will be seen by all the medical stores registered in the MediSocial.</li>
               <li>Find out the medical stores registered in the application with their name, contact number and address</li>
