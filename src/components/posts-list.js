@@ -8,6 +8,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const Post = props => (
     <div className="col-lg-4 col-md-4 col-sm-12 col-10 d-block m-auto" style={{zIndex: 1}}>
@@ -25,11 +26,11 @@ const Post = props => (
 export class postslist extends Component {
     constructor(props){
         super(props);
-        this.state = {posts: []};
+        this.state = {posts: [], isLoading: true};
     }
     componentDidMount(){
         axios.get('https://medisocial.herokuapp.com/posts/').then(response =>{
-        this.setState({posts: response.data});
+        this.setState({posts: response.data,isLoading: false});  
         }).catch((error)=>{
             console.log(error);
         })
@@ -75,7 +76,7 @@ export class postslist extends Component {
            </CardContent>
            </Card>
             <div className="row">
-               { this.postList() }
+               {this.state.isLoading? <div className="text-center"><CircularProgress/></div>: this.postList() }
             </div>
             </>
         )
