@@ -3,6 +3,7 @@ import { TextField, Button, Typography, Paper } from '@material-ui/core'
 import FileBase from 'react-file-base64';
 import axios from 'axios';
 import { Alert } from 'react-bootstrap';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const form = () => {
     const [postData, setPostData] = useState({ creator: '', title: '', image: '' });
@@ -48,7 +49,7 @@ const form = () => {
                 <TextField name="username" variant="outlined" required label="Your phone no.:" fullWidth value={user.username || ''} InputProps={{ readOnly: true,}} />
                 <TextField  variant="outlined" label="Enter name of the medicine" required fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
                 <div style={{width: '97%', margin: '10px 0',}}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, image: base64 })} /></div>
-                <Button disabled={loading} style={{ marginBottom: 10,}}variant="contained" color="primary" size="large" type="submit" fullWidth>Submit</Button>
+                <Button disabled={loading} style={{ marginBottom: 10,}}variant="contained" color="primary" size="large" type="submit" fullWidth>Submit {loading && <CircularProgress color="secondary"/>}</Button>
                 <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
                 </form>
             </Paper>
