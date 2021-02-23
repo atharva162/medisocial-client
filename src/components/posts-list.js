@@ -68,6 +68,7 @@ export class postslist extends Component {
            </Typography>
            </CardContent>
            </Card>
+           <hr/>
            <Card>
            <CardContent>
            <Typography variant="body2" component="p">
@@ -76,7 +77,7 @@ export class postslist extends Component {
            </CardContent>
            </Card>
             <div className="row">
-               {this.state.isLoading? <div className="text-center"><CircularProgress/></div>: this.postList() }
+               {this.state.isLoading? <div className="justify-content-md-center"><CircularProgress/></div>: this.postList() }
             </div>
             </>
         )
