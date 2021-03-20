@@ -32,7 +32,7 @@ function contact() {
     <p className="w-100 text-center mt-2">
     If you are facing any issue in creating an account in this Application or some other kind of issue, you can call on this no.
     <br/>
-    Phone: <a href="#">6306363669</a>
+    Phone: 6306363669
     <br/>
     or</p>
     <Typography variant="h4" style={{left: '50%',}}>Leave a message</Typography>
